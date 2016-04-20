@@ -18,26 +18,6 @@
 
 
 	<mvc:annotation-driven></mvc:annotation-driven>
-
-	<mvc:default-servlet-handler />
-
-	<bean id="templateResolver"
-		class="org.thymeleaf.templateresolver.ServletContextTemplateResolver">
-		<property name="prefix" value="/dashboard/pages/" />
-		<property name="suffix" value=".html" />
-		<property name="templateMode" value="HTML5" />
-		<property name="cacheable" value="false" />
-	</bean>
-	<bean id="templateEngine" class="org.thymeleaf.spring3.SpringTemplateEngine">
-		<property name="templateResolver" ref="templateResolver" />
-	</bean>
-	<bean class="org.thymeleaf.spring3.view.ThymeleafViewResolver">
-		<property name="templateEngine" ref="templateEngine" />
-		<property name="order" value="1" />
-		<property name="viewNames" value="thymeleaf/*" />
-	</bean>
-
-	<!-- <mvc:resources mapping="/resources/**" location="/resources/"/> <mvc:resources 
-		mapping="/dashboard/**" location="/dashboard" /> -->
-
+	<mvc:resources mapping="/dashboard/**" location="/dashboard/"/> 
+	
 </beans>
