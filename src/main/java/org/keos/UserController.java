@@ -11,7 +11,7 @@ public class UserController {
 	/*This is the method to first call */
 	@RequestMapping(value="/getUserDetails", method=RequestMethod.GET)
 	public ModelAndView getUserDetails(){
-		System.out.println("*****************************************");
+		System.out.println("*****************call made from user************************");
 		ModelAndView mav = new ModelAndView();
 		mav.setViewName("useroutput");
 		return mav;
