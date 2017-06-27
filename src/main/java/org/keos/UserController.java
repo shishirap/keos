@@ -8,7 +8,7 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 @RequestMapping("/userController")
 public class UserController {
-	
+	/*This is the method to first call */
 	@RequestMapping(value="/getUserDetails", method=RequestMethod.GET)
 	public ModelAndView getUserDetails(){
 		System.out.println("*****************************************");
